@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 48", "wheel >= 0.29.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django_institutions"
+version = "0.0.20"
+authors = [
+  { name="Konstantine Tsafatinos", email="kosta.tsaf@gmail.com" },
+]
+description = "A django app for institutions model fields"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/iamzoltan/django-institutions"
+Issues = "https://github.com/iamzoltan/django-institutions/issues"
