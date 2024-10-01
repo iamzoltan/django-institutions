@@ -52,6 +52,11 @@ class Institution:
     def name(self, value: str):
         self._name = value
 
+    def to_dict(self):
+        return {
+            "name": self._name
+        }
+
 
 class InstitutionDescriptor:
     """
