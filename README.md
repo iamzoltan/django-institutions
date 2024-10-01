@@ -2,7 +2,9 @@
 A Django application that provides a university institution field for models and a serializer.
 
 ## Installation
-`pip install django-institutions`
+- `pip install django-institutions`
+- Add `django_institutions` to your `INSTALLED_APPS`
+
 
 ## Usage
 ### InstitutionField
