@@ -29,7 +29,8 @@ class InstitutionField(serializers.ChoiceField):
             self.fail("invalid_choice", input=data)
 
         # Validating if the name exists in institutions
-        if name not in self.institutions.institutions:
+        if name not in self.institutions.institutions and name is not None:
+            print("Institution {} not found".format(name))
             self.fail("invalid_choice", input=data)
 
         return name
