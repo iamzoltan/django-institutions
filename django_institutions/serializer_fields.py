@@ -8,7 +8,7 @@ class InstitutionField(serializers.ChoiceField):
     def __init__(self, *args, **kwargs):
         self.institutions = institutions
         choices = [(inst.name, inst.name) for inst in institutions.institutions.values()]
-        super().__init__(choices=choices, *args, **kwargs)
+        super().__init__(choices=choices, allow_blank=True, allow_null=True, *args, **kwargs)
 
     def to_representation(self, obj):
         if obj is None:
