@@ -11,11 +11,16 @@ class InstitutionField(serializers.ChoiceField):
         super().__init__(choices=choices, *args, **kwargs)
 
     def to_representation(self, obj):
+        if obj is None:
+            return None
         if isinstance(obj, str):
             return {"name": force_str(obj)}
         return {"name": force_str(obj._name)}
 
     def to_internal_value(self, data):
+        if data is None:
+            # Allowing setting the field to None
+            return None
         if isinstance(data, dict):
             name = data.get("name")
         elif isinstance(data, str):
